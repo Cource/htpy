@@ -12,6 +12,6 @@ def main(txt_val):
         eel.add(total)
         eel.log(txt_val + '<br>')
     else:
-        print('[!]Invalid argument exeption: Dont input alphabets!')
+        print('[!] Invalid argument exeption: Dont input alphabets!')
 
 eel.start('index.html', size=(400, 1000))
