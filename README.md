@@ -2,6 +2,7 @@
 ### (shitty name ik lol)
 
 [![Build](https://img.shields.io/badge/Supported_OS-all-green.svg)]() 
+[![Build](https://img.shields.io/badge/Build-Beta-green.svg)]() 
  
 A python based sales calculator which utilizes html/js as front-end. 
 > uses eel for linking python functions with js
