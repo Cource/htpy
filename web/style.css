@@ -57,6 +57,15 @@ body, .icon{
   width: 100%;
 }
 
+.reset{
+  background-color: #e0e0e0;
+  border-style: solid;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+
 .go{
   background-color: #e0e0e0;
   border-style: solid;

@@ -1,5 +1,5 @@
 let txt = document.getElementById('txt')
-let btn = document.getElementById('btn')
+let go = document.getElementById('go')
 let logContainer = document.getElementById('log')
 
 function callPy () {
@@ -8,11 +8,17 @@ function callPy () {
 
 eel.expose(add)
 function add (total) {
-  btn.innerHTML = '<img src="images/rs.svg">' + total
+  go.innerHTML = '<img src="images/rs.svg">' + total
   txt.value = ''
 }
 
 eel.expose(log)
 function log (arg) {
   logContainer.innerHTML += arg
+}
+
+function reset() {
+  go.innerHTML = '<img src="images/plus.svg">'
+  txt.value = ''
+  logContainer.innerHTML = ''
 }
