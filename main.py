@@ -14,4 +14,11 @@ def main(txt_val):
     else:
         print('[!] Invalid argument exeption: Dont input alphabets!')
 
+
+@eel.expose
+def reset():
+    global total
+    total = 0
+
+
 eel.start('index.html', size=(400, 1000))

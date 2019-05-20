@@ -21,4 +21,5 @@ function reset() {
   go.innerHTML = '<img src="images/plus.svg">'
   txt.value = ''
   logContainer.innerHTML = ''
+  eel.reset()
 }
