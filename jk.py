@@ -5,11 +5,11 @@ total = 0
 
 
 @eel.expose
-def main(arg):
+def main(txt_val):
     global total
-    total += eval(arg)
-    eel.add(sum)
-    eel.log(arg)
+    total += eval(txt_val)
+    eel.add(total)
+    eel.log(txt_val + '<br>')
 
 
 eel.start('index.html', size=(400, 1000))

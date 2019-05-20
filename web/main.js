@@ -7,12 +7,12 @@ function callPy () {
 }
 
 eel.expose(add)
-function add (arg) {
-  btn.innerText = arg
+function add (total) {
+  btn.innerHTML = '<img src="images/rs.svg">' + total
   txt.value = ''
 }
 
 eel.expose(log)
 function log (arg) {
-  logContainer.innerHtml += txt.value + '<br>'
+  logContainer.innerHTML += arg
 }
