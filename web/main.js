@@ -1,9 +1,18 @@
 let txt = document.getElementById('txt')
 let btn = document.getElementById('btn')
-let log = document.getElementById('log')
+let logContainer = document.getElementById('log')
 
-function add() {
-  btn.innerText += txt.value
-  log.innerHtml += txt.value + '<br>'
+function callPy () {
+  eel.main(txt.value)
+}
+
+eel.expose(add)
+function add (arg) {
+  btn.innerText = arg
   txt.value = ''
+}
+
+eel.expose(log)
+function log (arg) {
+  logContainer.innerHtml += txt.value + '<br>'
 }
