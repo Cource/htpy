@@ -15,15 +15,21 @@ A python based sales calculator which utilizes html/js as front-end.
  
 ## Setup
 
-- Clone this repo to your device | open your terminal and type:
+##### Clone this repo to your device | open your terminal and type:
   >  ```git clone https://github.com/Cource/htpy.git```
  
-- install python from:
+##### Install python from:
   > https://www.python.org/downloads/
  
-- install eel using python package manager:
+##### Install eel using python package manager:
   > ```pip install eel```  
  
-- install chrome / chromium:
+##### Install chrome / chromium:
   > chrome: https://www.google.com/chrome/b/  
   > chromium(ubuntu): ```sudo apt install chromium-browser```
+
+## Run
+##### 1. ```cd``` into the repo
+##### 2. Run main.py in python
+   - Double-clicking / opening ```main.py``` works in windows  
+   - Or(in linux or osx) type ```python main.py```
