@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 74.504 83.279">
+  <defs>
+    <style>
+    .cls-1, .cls-2 {
+      fill: none;
+      stroke: #ff7043;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 15px;
+    }
+    </style>
+  </defs>
+  <g id="logo" transform="translate(-126.582 -91.5)">
+    <path id="Path_1" data-name="Path 1" class="cls-1" d="M163.578,99v53.38c.386,20.23-31.946,20.591-29.334-3.474"/>
+    <path id="Path_2" data-name="Path 2" class="cls-2" d="M179.109,100.307l-28.358,27.13,28.358,30.851" transform="translate(14.478 1.136)"/>
+  </g>
+</svg>
