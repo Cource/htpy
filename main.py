@@ -21,7 +21,6 @@ pData = "Data/Purchase/" + d
 def main(txt_val):
     global sTotal, pTotal, currentTab
     if not txt_val.isalpha():
-
         if currentTab == 'sale':
             sTotal += eval(txt_val)
             eel.add(sTotal)
@@ -35,7 +34,7 @@ def main(txt_val):
 
 
 @eel.expose
-def reset():
+def reset(sellerName):
     global sTotal, pTotal, currentTab
 
     if currentTab == 'sale':

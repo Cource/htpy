@@ -1,5 +1,5 @@
 let amt = document.getElementById('amt')
-let sellerName = document.getElementById('name')
+let seller = document.getElementById('name')
 let go = document.getElementById('go')
 let sLog = document.getElementById('saleLog')
 let pLog = document.getElementById('purchaseLog')
@@ -14,23 +14,25 @@ function callPy () {
 function isSale(arg) {
   isOnSale = arg
   if (isOnSale) {
-    eel.current_tab('sale')
     salesTab.style.backgroundColor = '#e0e0e0'
     salesTab.style.color = '#424242'
     purchaseTab.style.backgroundColor = '#eeeeee'
     purchaseTab.style.color = '#757575'
     pLog.hidden = true
     sLog.hidden = false
-    sellerName.hidden = true
+    seller.hidden = true
+    go.hidden = false
+    eel.current_tab('sale')
   } else {
-    eel.current_tab('purchase')
     salesTab.style.backgroundColor = '#eeeeee'
     salesTab.style.color = '#757575'
     purchaseTab.style.backgroundColor = '#e0e0e0'
     purchaseTab.style.color = '#424242'
     sLog.hidden = true
     pLog.hidden = false
-    sellerName.hidden = false
+    seller.hidden = false
+    go.hidden = true
+    eel.current_tab('purchase')
   }
 }
 
@@ -50,14 +52,14 @@ function log (arg) {
 }
 
 function reset() {
+  eel.reset(seller.value)
   go.innerHTML = '<img src="images/plus.svg">'
   amt.value = ''
+  seller.value = ''
 
   if (isOnSale) {
     sLog.innerHTML = ''
   }else {
     pLog.innerHTML = ''
   }
-
-  eel.reset()
 }

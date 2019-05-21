@@ -80,6 +80,7 @@ body, .icon{
   border-right-color: #e0e0e0;
   border-right-style: solid;
   border-right-width: 10px;
+  height: fill;
 }
 
 .reset, .go{
