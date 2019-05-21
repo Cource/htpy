@@ -2,7 +2,9 @@ import datetime
 import eel
 
 eel.init('web')
-total = 0
+sTotal = 0
+pTotal = 0
+currentTab = 'sale'
 
 d = ''
 for i in datetime.datetime.now().strftime('%x'):
@@ -11,15 +13,22 @@ for i in datetime.datetime.now().strftime('%x'):
     else:
         d += i
 
-data = "Data/" + d
+sData = "Data/" + d
+pData = "Data/Purchase/" + d
 
 
 @eel.expose
 def main(txt_val):
-    global total
+    global sTotal, pTotal, currentTab
     if not txt_val.isalpha():
-        total += eval(txt_val)
-        eel.add(total)
+
+        if currentTab == 'sale':
+            sTotal += eval(txt_val)
+            eel.add(sTotal)
+        else:
+            pTotal += eval(txt_val)
+            eel.add(pTotal)
+
         eel.log(txt_val + '<br>')
     else:
         print('[!] Invalid argument exeption: Dont input alphabets!')
@@ -27,11 +36,24 @@ def main(txt_val):
 
 @eel.expose
 def reset():
-    global total
-    file_p = open(data, "a")
-    file_p.write(str(total) + '\n')
-    file_p.close()
-    total = 0
+    global sTotal, pTotal, currentTab
+
+    if currentTab == 'sale':
+        file = open(sData, "a")
+        file.write(str(sTotal) + '\n')
+        sTotal = 0
+    else:
+        file = open(pData, "a")
+        file.write(sellerName + ' : ' + str(pTotal) + '\n')
+        pTotal = 0
+
+    file.close()
+
+
+@eel.expose
+def current_tab(arg):
+    global currentTab
+    currentTab = arg
 
 
 eel.start('index.html', size=(400, 1000))

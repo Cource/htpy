@@ -38,6 +38,11 @@ body, .icon{
   padding-top: 5px;
 }
 
+.purchase{
+  background-color: #eeeeee;
+  color: #757575
+}
+
 
 .main, .text_area{
   border-color: #e0e0e0;
@@ -65,10 +70,16 @@ body, .icon{
   margin: -8px;
 }
 
-.txtbox{
+.txtbox, .txtbox2{
   border-style: none;
   margin-left: 10px ;
   width: 100%;
+}
+
+.txtbox2{
+  border-right-color: #e0e0e0;
+  border-right-style: solid;
+  border-right-width: 10px;
 }
 
 .reset, .go{

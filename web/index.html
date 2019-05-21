@@ -13,21 +13,23 @@
     </div>
 
     <div class="tabs">
-      <div class="sales">
+      <div id="sales" class="sales" onclick=isSale(true)>
         Sales
       </div>
-      <div class="purchase">
+      <div id="purchase" class="purchase" onclick=isSale(false)>
         Purchase
       </div>
     </div>
 
     <div class="main">
       <div class="text_area">
-        <input type="text" class="txtbox" id="txt" onchange=callPy()>
+        <input type="text" class="txtbox2" id="name" hidden onchange=callPy()>
+        <input type="text" class="txtbox" id="amt" onchange=callPy()>
         <button class="go" id="go" ondblclick=callPy()><img src="images/plus.svg"></button>
         <button class="reset" id="reset" onclick="reset()"><img src="images/cart.svg"></button>
       </div>
-      <div class="log" id="log"></div>
+      <div class="log" id="saleLog"></div>
+      <div class="log" id="purchaseLog"></div>
     </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
