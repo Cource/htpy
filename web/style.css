@@ -22,15 +22,35 @@ body, .icon{
   margin-right: 10px;
 }
 
-.main{
+.tabs{
+  display: flex;
+  flex-flow: row;
+  margin-left: 30px;
+}
+
+.sales, .purchase{
+  background-color: #e0e0e0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-right: 5px;
+  padding: 10px;
+  padding-bottom: 0;
+  padding-top: 5px;
+}
+
+
+.main, .text_area{
   border-color: #e0e0e0;
   border-radius: 30px;
   border-style: solid;
   border-width: 10px;
   display: flex;
   flex-flow: column-reverse;
-  height: calc(100vh - 130px);
   justify-content: flex-start;
+}
+
+.main{
+  height: calc(100vh - 150px);
 }
 
 .log{
@@ -40,11 +60,6 @@ body, .icon{
 
 .text_area{
   align-items: center;
-  border-color: #e0e0e0;
-  border-radius: 30px;
-  border-style: solid;
-  border-width: 10px;
-  display: flex;
   flex-flow: row;
   justify-content: space-around;
   margin: -8px;
@@ -52,20 +67,16 @@ body, .icon{
 
 .txtbox{
   border-style: none;
-  font-size: 20px;
   margin-left: 10px ;
   width: 100%;
 }
 
-.reset{
+.reset, .go{
   background-color: #e0e0e0;
   border-style: none;
   display: flex;
 }
 
 .go{
-  background-color: #e0e0e0;
-  border-style: none;
-  display: flex;
   padding-left: 10px;
 }
