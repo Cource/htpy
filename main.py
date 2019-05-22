@@ -55,4 +55,4 @@ def current_tab(arg):
     currentTab = arg
 
 
-eel.start('index.html', size=(400, 1000))
+eel.start('index.html', size=(400, 1000), options={'mode' : 'electron'})
